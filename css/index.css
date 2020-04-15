@@ -1,1 +1,304 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.flexRow {
+  display: flex;
+  flex-flow: row ;
+}
+.flexColumn {
+  display: flex;
+  flex-flow: column;
+}
+html {
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?cs=srgb&dl=abstract-art-blur-bright-373543.jpg&fm=jpg");
+}
+html body {
+  font-family: Girassol;
+  border-radius: 5%;
+  padding: 5%;
+  margin: 5%;
+  background-color: rgba(155, 154, 154, 0.8);
+}
+.resumeHeader {
+  display: flex;
+  flex-flow: row ;
+  width: 100%;
+  align-items: baseline;
+}
+@media (max-width: 500px) {
+  .resumeHeader {
+    display: flex;
+    flex-flow: column;
+  }
+}
+.resumeHeader h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+@media (max-width: 500px) {
+  .resumeHeader h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+.resumeHeader .navBar {
+  width: 75%;
+}
+@media (max-width: 500px) {
+  .resumeHeader .navBar {
+    width: 100%;
+    border-bottom: solid 1px black;
+    margin-bottom: 5%;
+  }
+}
+.resumeHeader .navBar ul {
+  display: flex;
+  flex-flow: row ;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.resumeHeader .navBar ul a {
+  text-decoration: none;
+  color: black;
+}
+#headline {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+#headline #photoDiv {
+  display: flex;
+  flex-flow: row ;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  #headline #photoDiv {
+    display: none;
+  }
+}
+#headline #photoDiv img {
+  max-width: 100%;
+  width: 100%;
+  padding: 5% 20%;
+  border-radius: 50%;
+}
+#headline h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+#headline p {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+#intro {
+  margin-bottom: 5%;
+}
+#intro h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+#skills {
+  margin-bottom: 5%;
+}
+#skills h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+#skills p {
+  font-weight: bold;
+}
+#skills p a {
+  color: black;
+}
+#skills ul {
+  list-style: square inside;
+}
+#workHistory {
+  margin-bottom: 5%;
+}
+#workHistory h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+#workHistory .historyBoxes {
+  display: flex;
+  flex-flow: row ;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  #workHistory .historyBoxes {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+  }
+}
+#workHistory .historyBoxes .box {
+  padding: 5%;
+  border: 2px solid black;
+  border-radius: 5%;
+  margin: 5%;
+}
+#workHistory .historyBoxes .box h3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#workHistory .historyBoxes .box span {
+  font-weight: bold;
+}
+#contactMe {
+  margin-bottom: 5%;
+}
+#contactMe h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+#contactMe p {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+#contactMe ul li {
+  margin-bottom: 2%;
+}
+#contactMe ul li span {
+  font-weight: normal;
+  color: black;
+}
+#contactMe ul a {
+  font-weight: normal;
+  color: black;
+}
